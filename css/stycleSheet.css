@@ -1,0 +1,46 @@
+#container { 
+    width:100%;
+    border:0px solid blue;
+    padding:20px 40px;
+    margin:0 auto;
+}
+fieldset { margin-bottom:15px; }
+legend { font-weight:bold; }
+h1 {
+    display: inline-block;
+    font-size:1.4em;
+    background-color:#222;
+    color:#fff;
+    padding:10px;
+}
+ul {
+    list-style:none;
+}
+li {
+    font-size:1em;
+    line-height:1.7;
+    /* color:blue; */
+}
+.accent {
+    font-size:1.2em;
+    line-height:1.5;
+    color:blue;
+}
+
+.container7 {
+    width:450px;
+    padding:10px;
+    border:1px solid black;
+}
+.subject {
+    font-weight:650;
+    font-size:larger;
+    color:orangered;
+}
+.container7 h1 {
+    display: inline-block;
+    font-size:1.6em;
+    background-color: white;
+    color:black;
+    padding:10px;
+}
