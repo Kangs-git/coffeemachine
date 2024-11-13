@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 기능</title>
+</head>
+<body>
+    <div class="coffee">
+        <a href="./detail/americano.html"><img src="../images/아메리카노.jpg" width="100" /></a>
+        <p><span id="ice_coffee_name">아이스 아메리카노</span></p>
+        <p>가격:<span id="ice_price">2,000</span>원</p>
+        <p>수량:<span>20개</span></p>
+        <button onclick="showMenu('1')">주문</button>
+    </div>
+    <p><span id="orderd_coffe_name"></span>(<span id="price"></span>원)
+       수량 : <button id="up" >+</button><span id="amount"> 0 </span><button id="down">-</button>
+       금액 : <input type="text" value="0" id="total_price" readonly>
+    </p>
+</body>
+<script>
+    iceCoffeeName =  document.getElementById("ice_coffee_name").innerHTML
+    
+    icePrice =   document.querySelector("#ice_price").innerHTML
+    document.getElementById("orderd_coffe_name").innerHTML = iceCoffeeName
+    document.getElementById("price").innerHTML = icePrice
+    document.getElementById("amount").innerHTML = 0    
+    price = icePrice.replace(',','')
+    
+    amount = 0
+    
+    up_button = document.querySelector("#up")
+    up_button.addEventListener('click', () => {
+        if (amount >= 10) {
+            console.log("10 이상: " + String(amount))
+            alert('10개 이상 신청할 수 없습니다')
+        } else {
+            amount ++
+            document.getElementById("amount").innerHTML = amount
+            total_price = price * amount
+            console.log("price = " + total_price)
+            document.getElementById("total_price").value = total_price
+        }
+    });
+
+    dowm_button = document.querySelector("#down")
+    dowm_button.addEventListener('click', () => {
+        amount --
+        if (amount > 0) {
+            document.getElementById("amount").innerHTML = amount
+            total_price = price * amount
+            console.log("price = " + total_price)
+            document.getElementById("total_price").value = total_price
+        } else {
+            amount = 0
+            document.getElementById("amount").innerHTML = amount
+            total_price = 0
+            document.getElementById("total_price").value = total_price
+            alert("수량은 최소 1이상입니다!!")
+        }
+   });
+
+
+
+
+</script>
+</html>

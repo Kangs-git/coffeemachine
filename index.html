@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="mystyle.css"> -->
+    <link rel="stylesheet" href="./css/stycleSheet.css">
+    <style>
+        #container {
+            width: 800px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 30px;
+            /* padding: 30px; */
+            border: 5px solid blanchedalmond;
+            background-color: rgb(227, 232, 235);
+        }
+
+        #title {
+            width: 190px;
+            margin-top: -20px;
+            margin-left: 300px;
+            border: 1px solid;
+            background-color: rgb(93, 134, 167);
+            color: white;
+            text-align: center;
+        }
+        .coffees {
+            width: 700px;
+            margin: 0px auto;
+            /* height: 250px;
+            margin-left: 25px;
+            border: 1px solid goldenrod;
+            background-color: white;
+            text-align: center; */
+        }
+        .coffee {
+            float: left;
+            /* display: inline-block; */
+            width: 200px;
+            /* height: 200px; */
+            padding: 7px;
+            margin-top: 25px;
+            margin-left: 15px;
+            border: 1px solid goldenrod;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+        }
+
+        /* .coffee p {
+            margin: 2px;
+            background-color: blanchedalmond;
+        } */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">커피주문기</h1>
+        <div class="coffees">
+            <div class="coffee">
+                <a href="./detail/americano.html"><img src="../images/아메리카노.jpg" width="100" /></a>
+                <p><span>아이스 아메리카노</span></p>
+                <p>가격:<span>2,000원</span></p>
+                <p>수량:<span>20개</span></p>
+                <button onclick="showMenu('1')">주문</button>
+            </div>
+            <div class="coffee">
+                <a href="./detail/hotAmericano.html"><img src="../images/핫아메리카노.jpg" width="100" /></a>
+                <p>핫 아메리카노</p>
+                <p>가격:<span>3,000원</span></p>
+                <p>수량:<span>20개</span></p>
+                <button onclick="showMenu('2')">주문</button>
+            </div>
+            <div class="coffee">
+                <a href="./detail/latte.html"><img src="../images/카페라테.jpg" width="100" height="100" /></a>
+                <p>카페 라떼</p>
+                <p>가격:<span>1,500원</span></p>
+                <p>수량:<span>20개</span></p>
+                <button onclick="showMenu('3')">주문</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showMenu(flag) {
+        
+        if (flag == 1) {
+            alert('아이스 아메리카노를 주문하시겠습니까?')
+        } else if (flag == 2) {
+            alert('핫 아메리카노를 주문하시겠습니까?')
+        } else if (flag == 3) { 
+            alert('카페 라떼를 주문하시겠습니까?')
+        }
+    }
+</script>
+</html>
