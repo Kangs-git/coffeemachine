@@ -13,7 +13,8 @@ def aaa():
    return 0
 ```
 ```
-![image](https://github.com/user-attachments/assets/552fd1ea-a1d3-4f7b-9357-f2aee4ffbb7d)
+![image](https://github.com/user-attachments/assets/14fb1528-d139-46f0-9dfa-e8b583899bc8)
+
 ```
 ### 부제목
 
